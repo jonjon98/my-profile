@@ -1,0 +1,25 @@
+.letterWrapper {
+  font-size: 50px;
+  font-weight: bold;
+  filter: drop-shadow(1px 1px 1px red) invert(0%);
+  transition: var(--transition);
+}
+
+.letterWrapper:hover{
+  color: black;
+  filter: drop-shadow(1px 1px 1px black) invert(0%);
+  animation: animate 1s;
+}
+
+.lettersWrapper {
+  display: flex;
+}
+
+@keyframes animate {
+  0%,40%,100% {
+    transform: translateY(0)
+  }
+  20% {
+    transform: translateY(-20px)
+  }
+}
