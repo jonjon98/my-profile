@@ -208,7 +208,7 @@ img {
   background: transparent;
   position: relative;
   transition: var(--transition-btn);
-}*/
+}
 
 /* button filler */
 /*.prompt:before {
@@ -221,20 +221,18 @@ img {
   background: linear-gradient(105deg, var(--color-orange) 50%, transparent 50%);
   background-size: 100%;
   background-position: 0%;
-}
+}*/
 
 .OSPrompt {
-  top: 50%;
-  margin: 0;
+  margin-top: 10px;
   color: var(--color-white);
 }
 
 .dirPrompt{
   width: fit-content;
-  top: 50%;
-  margin: 0;
-  color: var(--color-bg);
-}*/
+  margin-top: 10px;
+  color: var(--color-white);
+}
 
 /* ================== MEDIA QUERIES (MEDIUM DEVICES) ================== */
 @media screen and (max-width: var(--max-width-md)) {
