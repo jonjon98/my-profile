@@ -1,7 +1,8 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom';
-import Letters from './components/reusable/Letters.jsx'
-import Cursor from './globalStyle/Cursor.jsx'
+import './landing.css'
+import Letters from '../../components/Letters.jsx'
+import Cursor from './Cursor.js'
 
 const Landing = () => {
   const navigate = useNavigate();

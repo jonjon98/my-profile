@@ -1,0 +1,5 @@
+/* change HTML element with the ID "canvas" to have a fixed position. */
+/* Used for cursor's canvas */
+#canvas {
+    position: fixed
+}

@@ -1,5 +1,5 @@
-import Landing from './Landing.jsx'
-import Header from './components/header/Header.jsx'
+import Landing from './pages/landing/Landing.jsx'
+import Header from './pages/header/Header.jsx'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {

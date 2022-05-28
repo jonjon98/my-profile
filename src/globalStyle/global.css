@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap');
 
+/* all elements class */
 * {
   margin: 0;
   padding: 0;
@@ -10,6 +11,7 @@
   text-decoration: none;
 }
 
+/* document's root folder */
 :root {
   --color-bg: #381f1f;
   --color-bg-variant: #6c2c2c; 
@@ -28,6 +30,7 @@
   --max-width-sm: 600px;
 }
 
+/* html elements */
 html {
   scroll-behavior: smooth;
 }
@@ -36,11 +39,12 @@ html {
   display: none;
 }
 
+/* body elements */
 body {
   font-family: 'Fira Code', monospace;
   color: var(--color-white);
   background-color:#282828;
-  /* to text selection */
+  /* no text selection */
   -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
      -khtml-user-select: none; /* Konqueror HTML */
@@ -51,11 +55,13 @@ body {
 }
 
 /* ================== GENERAL STYLES ================== */
+/* "container" className */
 .container {
   width: var(--container-width-lg);
   margin: 0 auto;
 }
 
+/* h1, h2, h3, h4, h5 elements */
 h1,
 h2,
 h3,
@@ -64,38 +70,46 @@ h5 {
   font-weight: 500;
 }
 
+/* h1 elements */
 h1 {
   font-size: 2.5rem;
 }
 
+/* section elements */
 section {
   margin-top: 8rem;
   margin-left: 7rem;
 }
 
+/* all h2 and h5 elements where parent is section */
 section > h2, section > h5 {
   text-align: center;
   color: var(--color-light);
 }
 
+/* all h2 elements where parent is section */
 section > h2 {
   color: var(--color-primary);
   margin-bottom: 3rem;
 }
 
+/* "text-light" className */
 .text-light {
   color: var(--color-light);
 }
 
+/* a elements */
 a {
   color: var(--color-primary);
   transition: var(--transition);
 }
 
+/* mouse hover over a elements */
 a:hover {
   color: var(--color-white);
 }
 
+/* "btn" className */
 .btn {
   width: max-content;
   display: inline-block;
@@ -107,27 +121,28 @@ a:hover {
   transition: var(--transition);
 }
 
+/* mouse hover over btn class elements */
 .btn:hover {
   background: var(--color-white);
   color: var(--color-bg);
   border-color: transparent;
 }
 
+/* "btn-primary" className */
 .btn-primary {
   background: var(--color-primary);
   color: var(--color-bg);
 }
 
+/* img elements */
 img {
   display: block;
   width: 100%;
   object-fit: cover;
 }
 
-#canvas {
-  position: fixed
-}
-
+/* "foreground" className */
+/* class to put information in the foreground on top of canvas */
 .foreground {
   position:fixed; 
   left:0px; 
