@@ -124,6 +124,16 @@ img {
   object-fit: cover;
 }
 
+#canvas {
+  position: fixed
+}
+
+.foreground {
+  position:fixed; 
+  left:0px; 
+  top:20px;
+}
+
 /* ================== MEDIA QUERIES (MEDIUM DEVICES) ================== */
 @media screen and (max-width: var(--max-width-md)) {
   .container {
