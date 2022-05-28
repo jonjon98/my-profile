@@ -21,7 +21,7 @@
   --color-red: #D00000;
   --color-white: #EBF2FA;
   --color-green: #BCD979;
-  --color-yellow: #FFD23F;
+  --color-orange: #CC4100;
 
   /* transitions */
   --transition: all 400ms ease;
@@ -134,7 +134,7 @@ button:after {
   bottom: 0;
   left: 0;
   right: 0;
-  background: linear-gradient(75deg, var(--color-red) 50%, transparent 50%);
+  background: linear-gradient(105deg, var(--color-red) 50%, transparent 50%);
   z-index: -1;  
   background-size: 300%;
   background-position: 100%;
@@ -166,6 +166,75 @@ img {
   left:50px; 
   top:20px;
 }
+
+.hidden {
+  display: none;
+}
+
+/* ================== TERMINAL STYLES ================== */
+/* typewriter */
+.typewriter {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid var(--color-red); /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  letter-spacing: 0em; /* Adjust as needed */
+  animation: 
+    typing 1s steps(40, end),
+    blink-caret 0.75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: var(--color-red); }
+}
+
+/* terminal prompt */
+/* button elements */
+/*.prompt {
+  font-family: var(--font-primary);
+  font-size: 20px;
+  width: max-content;
+  display: inline-block;
+  color: var(--color-red);
+  padding: 0.5rem 5rem;
+  border-radius: 0rem;
+  background: transparent;
+  position: relative;
+  transition: var(--transition-btn);
+}*/
+
+/* button filler */
+/*.prompt:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(105deg, var(--color-orange) 50%, transparent 50%);
+  background-size: 100%;
+  background-position: 0%;
+}
+
+.OSPrompt {
+  top: 50%;
+  margin: 0;
+  color: var(--color-white);
+}
+
+.dirPrompt{
+  width: fit-content;
+  top: 50%;
+  margin: 0;
+  color: var(--color-bg);
+}*/
 
 /* ================== MEDIA QUERIES (MEDIUM DEVICES) ================== */
 @media screen and (max-width: var(--max-width-md)) {
