@@ -3,20 +3,17 @@ import './components.css'
 import Letter from './Letter.jsx'
 
 const Letters = (props) => {
-
+  /* Map the string of letters to each returning its own component */
   const letters = props.letters.split(/(?!$)/u);  
   const lettersItems = letters.map((letter, index) => {
-      if(letter === " "){
-        return <pre key={index}>  </pre>
-      }
       return <Letter key={index} letter={letter} />
     }
   );
 
   return (
-    <div className='lettersWrapper'>
+    <h1 className='lettersWrapper'>
         {lettersItems}
-    </div>
+    </h1>
   )
 }
 

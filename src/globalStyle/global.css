@@ -13,15 +13,21 @@
 
 /* document's root folder */
 :root {
-  --color-bg: #381f1f;
-  --color-bg-variant: #6c2c2c; 
-  --color-primary: rgb(255, 0, 0);
-  --color-primary-variant: rgba(255, 77, 77, 0.4);
-  --color-white: #ffffff;
-  --color-light: rgba(255, 255, 255, 0.6);
+  /* fonts */
+  --font-primary: 'Fira Code', monospace;
 
+  /* colors */
+  --color-bg: #282828;
+  --color-red: #D00000;
+  --color-white: #EBF2FA;
+  --color-green: #BCD979;
+  --color-yellow: #FFD23F;
+
+  /* transitions */
   --transition: all 400ms ease;
+  --transition-btn: 1s, font-size 0.2s;
 
+  /* sizing */
   --container-width-lg: 75%;
   --container-width-md: 86%;
   --container-width-sm: 90%;
@@ -41,9 +47,9 @@ html {
 
 /* body elements */
 body {
-  font-family: 'Fira Code', monospace;
+  font-family: var(--font-primary);
   color: var(--color-white);
-  background-color:#282828;
+  background-color: var(--color-bg);
   /* no text selection */
   -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
@@ -84,23 +90,18 @@ section {
 /* all h2 and h5 elements where parent is section */
 section > h2, section > h5 {
   text-align: center;
-  color: var(--color-light);
+  color: var(--color-white);
 }
 
 /* all h2 elements where parent is section */
 section > h2 {
-  color: var(--color-primary);
+  color: var(--color-red);
   margin-bottom: 3rem;
-}
-
-/* "text-light" className */
-.text-light {
-  color: var(--color-light);
 }
 
 /* a elements */
 a {
-  color: var(--color-primary);
+  color: var(--color-red);
   transition: var(--transition);
 }
 
@@ -109,29 +110,45 @@ a:hover {
   color: var(--color-white);
 }
 
-/* "btn" className */
-.btn {
+/* button elements */
+button {
+  font-family: var(--font-primary);
+  font-size: 20px;
   width: max-content;
   display: inline-block;
-  color: var(--color-primary);
-  padding: 0.75rem 1.2rem;
-  border-radius: 0.4rem;
+  color: var(--color-red);
+  padding: 0.5rem 5rem;
+  border-radius: 0rem;
   cursor: pointer;
-  border: 1px solid var(--color-primary);
-  transition: var(--transition);
+  border: 2px solid var(--color-red);
+  background: transparent;
+  position: relative;
+  transition: var(--transition-btn);
 }
 
-/* mouse hover over btn class elements */
-.btn:hover {
-  background: var(--color-white);
-  color: var(--color-bg);
-  border-color: transparent;
+/* button filler */
+button:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(75deg, var(--color-red) 50%, transparent 50%);
+  z-index: -1;  
+  background-size: 300%;
+  background-position: 100%;
+  transition: var(--transition-btn);
 }
 
-/* "btn-primary" className */
-.btn-primary {
-  background: var(--color-primary);
-  color: var(--color-bg);
+button:hover{
+  color: var(--color-white);
+}
+
+/* mouse hover over button elements */
+button:hover:after {
+  background-position: 0%;
+  font-size: 1.1em;
 }
 
 /* img elements */
@@ -144,8 +161,9 @@ img {
 /* "foreground" className */
 /* class to put information in the foreground on top of canvas */
 .foreground {
-  position:fixed; 
-  left:0px; 
+  position:fixed;
+  background: transparent;
+  left:50px; 
   top:20px;
 }
 

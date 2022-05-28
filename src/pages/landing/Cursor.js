@@ -2,7 +2,7 @@ import { useEffect } from 'react'
 
 const Cursor = () => {
   useEffect(() => {
-    const canvas = document.getElementById('div');
+    const canvas = document.getElementById('canvas');
     const ctx = canvas.getContext('2d');
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
@@ -29,7 +29,7 @@ const Cursor = () => {
         this.size = Math.random()*2 + 0.1;
         this.speedX = Math.random()*2 - 1;
         this.speedY = Math.random()*2 - 1;
-        this.colour = 'hsl(' + hue + ', 100%, 50%)';
+        this.color = 'hsl(' + hue + ', 100%, 50%)';
       }
       update(){
         this.x += this.speedX;
@@ -39,7 +39,7 @@ const Cursor = () => {
         }
       }
       draw(){
-        ctx.fillStyle = this.colour;
+        ctx.fillStyle = this.color;
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI*2);
         ctx.fill();
@@ -56,8 +56,8 @@ const Cursor = () => {
           const distance = Math.sqrt(dx*dx + dy*dy)
           if(distance<90) {
             ctx.beginPath();
-            ctx.strokeStyle = spots[i].colour;
-            ctx.lineWidth = spots[i].size/10;
+            ctx.strokeStyle = spots[i].color;
+            ctx.lineWidth = spots[i].size/5;
             ctx.moveTo(spots[i].x, spots[i].y);
             ctx.lineTo(spots[j].x, spots[j].y);
             ctx.stroke();

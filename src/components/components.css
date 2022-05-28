@@ -1,17 +1,20 @@
 .letterWrapper {
   font-size: 40px;
   font-weight: 600;
-  filter: drop-shadow(1px 1px 1px red) invert(0%);
+  background: transparent;
+  filter: drop-shadow(2px 2px 2px var(--color-green)) invert(0%);
   transition: var(--transition);
 }
 
-.letterWrapper:hover{
-  color: black;
-  filter: drop-shadow(1px 1px 1px black) invert(0%);
-  animation: animate 1s;
+.letterWrapper.hover{
+  color: var(--color-red);
+  background: transparent;
+  filter: drop-shadow(2px 2px 2px var(--color-green)) invert(0%);
+  animation: animate 0.5s;
 }
 
 .lettersWrapper {
+  background: transparent;
   display: flex;
 }
 
@@ -20,6 +23,6 @@
     transform: translateY(0)
   }
   20% {
-    transform: translateY(-20px)
+    transform: translateY(-5px)
   }
 }
