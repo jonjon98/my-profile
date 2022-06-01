@@ -15,6 +15,7 @@ const Landing = () => {
 
   async function handleClick() {
     setCmdState(cmdState+1);
+    /* sleep for 1.5 seconds */
     await new Promise(r => setTimeout(r, 1500));
     navigate('/Header#about');
   }
@@ -33,10 +34,10 @@ const Landing = () => {
     <>
       <canvas id='canvas' />
       <div className='foreground'>
-        <h1 className='prompt'><VscTerminalUbuntu className='OSPrompt' />/<AiOutlineHome className='dirPrompt' />~</h1>
+        <h1 className='prompt'><VscTerminalUbuntu className='OSPrompt' />/<AiOutlineHome className='dirPrompt' /> ~</h1>
         <h1 className={animationEnd === 0 ? "typewriter" : animationEnd > 0 ? '' : 'hidden'} onAnimationEnd={handleAnimation}>$ whoami</h1>
         <h1 className={animationEnd === 1 ? "typewriter" : animationEnd > 1 ? '' : 'hidden'} onAnimationEnd={handleAnimation}>Jonathan Yap</h1>
-        <h1 className={animationEnd === 2 ? 'prompt' : 'hidden'}><VscTerminalUbuntu className='OSPrompt' />/<AiOutlineHome className='dirPrompt' />~</h1>
+        <h1 className={animationEnd === 2 ? 'prompt' : 'hidden'}><VscTerminalUbuntu className='OSPrompt' />/<AiOutlineHome className='dirPrompt' /> ~</h1>
         <h1 className={cmdState === 1 ? "typewriter" : 'hidden'}>cd ~/About</h1>
         {/*<Letters letters="Hi, I'm Jonathan."></Letters>*/}
         {/*<Letters letters="Looking into further developments in Cyber Security and Cloud Computing."></Letters>*/}
