@@ -17,7 +17,7 @@ const Landing = () => {
     setCmdState(cmdState+1);
     /* sleep for 1.5 seconds */
     await new Promise(r => setTimeout(r, 1500));
-    navigate('/About');
+    navigate('/About', {state:{name:'About'}});
   }
   
   /* using states to check if typing animation is done */
