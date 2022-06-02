@@ -1,8 +1,12 @@
 import React from 'react'
+import Nav from '../nav/Nav.jsx'
 
 const Contact = () => {
   return (
-    <div>Contact</div>
+    <div>
+      <Nav />
+      Contact
+    </div>
   )
 }
 

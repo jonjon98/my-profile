@@ -1,8 +1,8 @@
 import React from 'react'
-import { useState } from 'react'
-import { useNavigate } from 'react-router-dom';
 import './landing.css'
 import Cursor from './Cursor.js'
+import { useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 import { AiOutlineHome } from 'react-icons/ai'
 import { VscTerminalUbuntu } from 'react-icons/vsc'
 
@@ -17,7 +17,7 @@ const Landing = () => {
     setCmdState(cmdState+1);
     /* sleep for 1.5 seconds */
     await new Promise(r => setTimeout(r, 1500));
-    navigate('/Header#about');
+    navigate('/About');
   }
   
   /* using states to check if typing animation is done */

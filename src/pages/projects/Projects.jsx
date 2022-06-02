@@ -1,8 +1,12 @@
 import React from 'react'
+import Nav from '../nav/Nav.jsx'
 
 const Projects = () => {
   return (
-    <div>Projects</div>
+    <div>
+      <Nav />
+      Projects
+    </div>
   )
 }
 
