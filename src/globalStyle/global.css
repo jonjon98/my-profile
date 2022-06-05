@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Inconsolata');
 
 /* all elements class */
 * {
@@ -14,7 +14,8 @@
 /* document's root folder */
 :root {
   /* fonts */
-  --font-primary: 'Fira Code', monospace;
+  --font-primary: 'Inconsolata', Helvetica, sans-serif;
+  --font-secondary: 'Fira Code', monospace;
 
   /* colors */
   --color-bg: #282828;
@@ -38,6 +39,7 @@
 
 /* html elements */
 html {
+  min-height: 100%;
   scroll-behavior: smooth;
 }
 
@@ -47,9 +49,18 @@ html {
 
 /* body elements */
 body {
+  box-sizing: border-box;
+  height: 100%;
+  background-color: #000000;
+  background-image: radial-gradient(#11581E, #041607);
+  background-repeat: no-repeat;
+  background-size: cover;
   font-family: var(--font-primary);
-  color: var(--color-white);
-  background-color: var(--color-bg);
+  font-size: 1.5rem;
+  color: #80FF80;
+  text-shadow:
+      0 0 1ex rgba(51, 255, 51, 1),
+      0 0 2px rgba(255, 255, 255, 0.8);
   /* no text selection */
   -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
