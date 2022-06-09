@@ -7,8 +7,15 @@ const Experience = () => {
 
   return (
     <div>
-      <Nav activeNav={location.state.name} />
       Experience
+      <Nav activeNav={location.state.name} />
+      <div>
+        <div>MicroSec</div>
+        <div>Avitron</div>
+        <div>ServerSam</div>
+        <div>RobTech</div>
+        <div>GrabFood</div>
+      </div>
     </div>
   )
 }

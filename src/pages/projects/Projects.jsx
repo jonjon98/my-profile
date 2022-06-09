@@ -7,8 +7,13 @@ const Projects = () => {
 
   return (
     <div>
-      <Nav activeNav={location.state.name} />
       Projects
+      <Nav activeNav={location.state.name} />
+      <div>
+        <div>FYP (WIP)</div>
+        <div>MDP</div>
+        <div>RC4 Cracking</div>
+      </div>
     </div>
   )
 }
