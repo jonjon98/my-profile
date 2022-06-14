@@ -52,14 +52,14 @@ body {
   box-sizing: border-box;
   height: 100%;
   background-color: #000000;
-  background-image: radial-gradient(#11581E, #041607);
+  background-image: radial-gradient(var(--color-bg), #000000);
   background-repeat: no-repeat;
   background-size: cover;
   font-family: var(--font-primary);
   font-size: 1.5rem;
-  color: #80FF80;
+  color: var(--color-red);
   text-shadow:
-      0 0 1ex rgba(51, 255, 51, 1),
+      0 0 1ex rgba(208, 0, 0, 1),
       0 0 2px rgba(255, 255, 255, 0.8);
   /* no text selection */
   -webkit-touch-callout: none; /* iOS Safari */
@@ -169,19 +169,6 @@ img {
   object-fit: cover;
 }
 
-/* "foreground" className */
-/* class to put information in the foreground on top of canvas */
-.foreground {
-  position:fixed;
-  background: transparent;
-  left:50px; 
-  top:20px;
-}
-
-.hidden {
-  display: none;
-}
-
 /* ================== TERMINAL STYLES ================== */
 /* typewriter */
 .typewriter {
@@ -191,6 +178,12 @@ img {
   letter-spacing: 0em; /* Adjust as needed */
   animation: 
     typing 1s steps(40, end),
+    blink-caret 0.75s step-end infinite;
+}
+  
+.typewriterCursor {
+  border-right: .15em solid var(--color-red); /* The typwriter cursor */
+  animation:
     blink-caret 0.75s step-end infinite;
 }
 
@@ -205,34 +198,6 @@ img {
   from, to { border-color: transparent }
   50% { border-color: var(--color-red); }
 }
-
-/* terminal prompt */
-/* button elements */
-/*.prompt {
-  font-family: var(--font-primary);
-  font-size: 20px;
-  width: max-content;
-  display: inline-block;
-  color: var(--color-red);
-  padding: 0.5rem 5rem;
-  border-radius: 0rem;
-  background: transparent;
-  position: relative;
-  transition: var(--transition-btn);
-}
-
-/* button filler */
-/*.prompt:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: linear-gradient(105deg, var(--color-orange) 50%, transparent 50%);
-  background-size: 100%;
-  background-position: 0%;
-}*/
 
 .OSPrompt {
   margin-top: 10px;
