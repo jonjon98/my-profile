@@ -27,3 +27,55 @@
     transform: translateY(-5px)
   }
 }
+
+/* ================== GLITCH STYLES ================== */
+.glitch {
+  font-size: 6rem;
+  font-weight: bold;
+  position: relative;
+
+  animation: glitch 750ms infinite;
+}
+
+.glitch span{
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.glitch span:first-child{
+  animation: glitch 650ms infinite;
+  clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
+  transform: translate(-0.025em, -0.0125em);
+}
+
+.glitch span:last-child{
+  animation: glitch 375ms infinite;
+  clip-path: polygon(0 60%, 100% 60%, 100% 100%, 0 100%);
+  transform: translate(0.0125em, 0.025em);
+}
+
+@keyframes glitch {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 1;
+  }
+  49% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+  
+}

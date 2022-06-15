@@ -2,6 +2,7 @@ import React from 'react'
 import './landing.css'
 import Cursor from './Cursor.js'
 import LavaFloor from './LavaFloor.js'
+import Glitch from '../../components/Glitch'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 //import { AiOutlineHome } from 'react-icons/ai'
@@ -47,11 +48,7 @@ const Landing = () => {
         {/*<h1 className={cmdState === 1 ? "typewriter" : 'hidden'}>cd ~/About</h1>*/}
         {/*<Letters letters="Hi, I'm Jonathan."></Letters>*/}
         {/*<Letters letters="Looking into further developments in Cyber Security and Cloud Computing."></Letters>*/}
-        <p class='glitch'>
-          I am Jonathan
-          <span aria-hidden='true'>I am Jonathan</span>
-          <span aria-hidden='true'>I am Jonathan</span>
-        </p>
+        <Glitch letters="I'm Jonathan."/>
         <button onClick={handleClick}>cd ~/About</button>
       </div>
     </>
