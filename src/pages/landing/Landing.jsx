@@ -1,10 +1,11 @@
 import React from 'react'
 import './landing.css'
 import Cursor from './Cursor.js'
-import LavaFloor from './LavaFloor.js'
+//import LavaFloor from './LavaFloor.js'
 import Glitch from '../../components/Glitch'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
+import TextScrambler from 'react-scramble-text'
 //import { AiOutlineHome } from 'react-icons/ai'
 //import { VscTerminalUbuntu } from 'react-icons/vsc'
 
@@ -33,12 +34,14 @@ const Landing = () => {
   /* function to give cursor a trail */
   Cursor()
   /* function to give LavaFloor */
-  LavaFloor()
+  /*LavaFloor()*/
+
+  const shortAboutMe = ["Cloud Computing", "Full Stack Developer", "Cyber Security", "Networking"]
 
   return (
     <>
       <canvas id='canvas' />
-      <canvas id='canvas2' />
+      {/*<canvas id='canvas2' />*/}
       
       <div className='foreground'>
         {/*<h1 className='prompt'><VscTerminalUbuntu className='OSPrompt' />/<AiOutlineHome className='dirPrompt' /> ~</h1>*/}
@@ -48,8 +51,10 @@ const Landing = () => {
         {/*<h1 className={cmdState === 1 ? "typewriter" : 'hidden'}>cd ~/About</h1>*/}
         {/*<Letters letters="Hi, I'm Jonathan."></Letters>*/}
         {/*<Letters letters="Looking into further developments in Cyber Security and Cloud Computing."></Letters>*/}
-        <Glitch letters="I'm Jonathan."/>
+        <Glitch letters="[I'm Jonathan.]"/>
+        <TextScrambler phrases={shortAboutMe} speed={50} pauseTime={800}/>
         <button onClick={handleClick}>cd ~/About</button>
+        
       </div>
     </>
   )

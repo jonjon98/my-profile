@@ -19,7 +19,7 @@
 
   /* colors */
   --color-bg: #282828;
-  --color-red: #D00000;
+  --color-red: #EBF2FA;
   --color-white: #EBF2FA;
   --color-green: #BCD979;
   --color-orange: #CC4100;
@@ -59,8 +59,8 @@ body {
   font-size: 1.5rem;
   color: var(--color-red);
   text-shadow:
-      0 0 1ex rgba(208, 0, 0, 1),
-      0 0 2px rgba(255, 255, 255, 0.8);
+      0 0 5px rgba(255, 255, 255, 0.8),
+      0 0 1px rgba(255, 255, 255, 0.8);
   /* no text selection */
   -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
@@ -153,7 +153,7 @@ button:after {
 }
 
 button:hover{
-  color: var(--color-white);
+  color: var(--color-bg);
 }
 
 /* mouse hover over button elements */

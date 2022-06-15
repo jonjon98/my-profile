@@ -7,8 +7,8 @@ const LavaFloor = () => {
         amplitudeX: 150,
         amplitudeY: 20,
         lines: 30,
-        startColor: '#000000',
-        endColor: '#FFFFFF'
+        startColor: '#282828',
+        endColor: '#EBF2FA'
     };
       
     const canvas = document.getElementById("canvas2");

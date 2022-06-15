@@ -3,7 +3,7 @@ import './components.css'
 
 const Glitch = (props) => {
   return (
-    <p class='glitch'>
+    <p className='glitch'>
         {props.letters}
         <span aria-hidden='true'>{props.letters}</span>
         <span aria-hidden='true'>{props.letters}</span>
