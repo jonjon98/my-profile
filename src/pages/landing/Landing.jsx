@@ -5,15 +5,41 @@ import Cursor from './Cursor.js'
 import Glitch from '../../components/Glitch'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
-import TextScrambler from 'react-scramble-text'
+import CypherText from 'react-cypher-text-loop'
 //import { AiOutlineHome } from 'react-icons/ai'
 //import { VscTerminalUbuntu } from 'react-icons/vsc'
 
+/* function to check if mouse is hovering over button */
+function useHover() {
+  const [hovering, setHovering] = useState(false)
+  const onHoverProps = {
+    onMouseEnter: () => setHovering(true),
+    onMouseLeave: () => setHovering(false),
+  }
+  return [hovering, onHoverProps]
+}
+
 const Landing = () => {
+  /* using states to check if typing animation is done */
+  //const [animationEnd, setAnimationEnd] = useState(0);
+  
+  //function handleAnimation() {
+  //  setAnimationEnd(animationEnd+1)
+  //}
+
+  /* function to give cursor a trail */
+  Cursor();
+  /* function to give LavaFloor */
+  /*LavaFloor();*/
+
+  /* shortAboutMe labels */
+  const shortAboutMe = ["Cloud Computing", "Full Stack Developer", "Cyber Security", "Networking"];
+  
+  /* About Page button */
   /* using states to check if "cd ~/About" button is pressed */
   const [cmdState, setCmdState] = useState(0);
 
-  /* functions to nagivate to header page */
+  /* functions to nagivate to about page */
   const navigate = useNavigate();
 
   async function handleClick() {
@@ -22,22 +48,10 @@ const Landing = () => {
     await new Promise(r => setTimeout(r, 0));
     navigate('/About', {state:{name:'About'}});
   }
-  
-  /* using states to check if typing animation is done */
-  //const [animationEnd, setAnimationEnd] = useState(0);
-  
-  //function handleAnimation() {
-  //  setAnimationEnd(animationEnd+1)
-  //}
 
-  /* TRY TO MERGE THESE TWO */
-  /* function to give cursor a trail */
-  Cursor();
-  /* function to give LavaFloor */
-  /*LavaFloor();*/
+  /* use on hover function for About Page button */
+  const [aboutBtnIsHovering, aboutBtnHoverProps] = useHover();
 
-  const shortAboutMe = ["Cloud Computing", "Full Stack Developer", "Cyber Security", "Networking"];
-  const aboutBtn = ["cd ~/About", "to About page"];
   return (
     <>
       <canvas id='canvas' />
@@ -52,9 +66,8 @@ const Landing = () => {
         {/*<Letters letters="Hi, I'm Jonathan."></Letters>*/}
         {/*<Letters letters="Looking into further developments in Cyber Security and Cloud Computing."></Letters>*/}
         <Glitch letters="[I'm Jonathan.]"/>
-        <TextScrambler phrases={shortAboutMe} speed={50} pauseTime={800}/>
-        <button onClick={handleClick}><TextScrambler phrases={aboutBtn} speed={50} pauseTime={800}/></button>
-        
+        <CypherText textList={shortAboutMe} delay={1300}/>
+        <button onClick={handleClick} {...aboutBtnHoverProps}>{aboutBtnIsHovering ? "About page" : "cd ~/About"}</button>
       </div>
     </>
   )

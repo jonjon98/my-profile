@@ -9,7 +9,9 @@ const About = () => {
   
   return (
     <div>
-      About
+      <div className='aboutHeading'>
+        <h1 className='typewriter'>$ whoami</h1>
+      </div>
       <Nav activeNav={location.state.name} />
       <div className='aboutMe'>
         <div className='aboutMeImageBackground'>

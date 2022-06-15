@@ -1,46 +1,50 @@
+.aboutHeading{
+  width: 8.5%;
+}
+
 .aboutMe {
-    display: grid;
-    grid-template-columns: 30% 50%;
-    gap: 15%;
+  display: grid;
+  grid-template-columns: 30% 50%;
+  gap: 15%;
 }
 
 .aboutMeImage {
-    height: 100%;
-    width: 100%;
-    border-radius: 20%;
-    overflow: hidden;
-    transform: rotate(10deg);
-    transition: var(--transition);
-    display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 20%;
+  overflow: hidden;
+  transform: rotate(10deg);
+  transition: var(--transition);
+  display: inline-block;
 }
 
 .aboutMeImage:hover {
-    transform: rotate(0deg);
+  transform: rotate(0deg);
 }
 
 .aboutMeImageBackground {
-    height: 50%;
-    width: 50%;
-    aspect-ratio: 1/2;
-    border-radius: 20%;
-    margin: auto;
-    background: linear-gradient(
-        45deg,
-        transparent,
-        var(--color-red),
-        transparent
-    );
-    display: inline-grid;
-    place-items: center;
+  height: 50%;
+  width: 50%;
+  aspect-ratio: 1/2;
+  border-radius: 20%;
+  margin: auto;
+  background: linear-gradient(
+      45deg,
+      transparent,
+      var(--color-red),
+      transparent
+  );
+  display: inline-grid;
+  place-items: center;
 }
 
 .aboutMeTextCard {
-    background: linear-gradient(
-        45deg,
-        transparent,
-        var(--color-red),
-        transparent
-    );
+  background: linear-gradient(
+      45deg,
+      transparent,
+      var(--color-red),
+      transparent
+  );
 }
 
 .aboutMeTextCardBackground {
@@ -48,8 +52,8 @@
 }
 
 .aboutMeText {
-    overflow: hidden;
-    padding: 70px 0;
-    margin: 20px;
-    text-align: left;
+  overflow: hidden;
+  padding: 70px 0;
+  margin: 20px;
+  text-align: left;
 }
