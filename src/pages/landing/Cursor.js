@@ -30,7 +30,7 @@ const Cursor = () => {
         this.size = Math.random()*2 + 0.1;
         this.speedX = Math.random()*2 - 1;
         this.speedY = Math.random()*2 - 1;
-        this.color = 'hsl(0, 100%, '+luminance+'%)';
+        this.color = 'hsl(0, 0%, '+luminance+'%)';
       }
       update(){
         this.x += this.speedX;

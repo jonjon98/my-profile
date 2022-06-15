@@ -32,12 +32,12 @@ const Landing = () => {
 
   /* TRY TO MERGE THESE TWO */
   /* function to give cursor a trail */
-  Cursor()
+  Cursor();
   /* function to give LavaFloor */
-  /*LavaFloor()*/
+  /*LavaFloor();*/
 
-  const shortAboutMe = ["Cloud Computing", "Full Stack Developer", "Cyber Security", "Networking"]
-
+  const shortAboutMe = ["Cloud Computing", "Full Stack Developer", "Cyber Security", "Networking"];
+  const aboutBtn = ["cd ~/About", "to About page"];
   return (
     <>
       <canvas id='canvas' />
@@ -53,7 +53,7 @@ const Landing = () => {
         {/*<Letters letters="Looking into further developments in Cyber Security and Cloud Computing."></Letters>*/}
         <Glitch letters="[I'm Jonathan.]"/>
         <TextScrambler phrases={shortAboutMe} speed={50} pauseTime={800}/>
-        <button onClick={handleClick}>cd ~/About</button>
+        <button onClick={handleClick}><TextScrambler phrases={aboutBtn} speed={50} pauseTime={800}/></button>
         
       </div>
     </>
