@@ -1,0 +1,29 @@
+/* ================== LETTER STYLES ================== */
+.letterWrapper {
+    font-size: 40px;
+    font-weight: 600;
+    background: transparent;
+    filter: drop-shadow(2px 2px 2px var(--color-green)) invert(0%);
+    transition: var(--transition);
+  }
+  
+  .letterWrapper.hover{
+    color: var(--color-white);
+    background: transparent;
+    filter: drop-shadow(2px 2px 2px var(--color-green)) invert(0%);
+    animation: animate 0.5s;
+  }
+  
+  .lettersWrapper {
+    background: transparent;
+    display: flex;
+  }
+  
+  @keyframes animate {
+    0%,40%,100% {
+      transform: translateY(0)
+    }
+    20% {
+      transform: translateY(-5px)
+    }
+  }

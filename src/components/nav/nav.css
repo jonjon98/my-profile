@@ -1,0 +1,59 @@
+nav {
+  background: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  display: block;
+  z-index: 2;
+  position: fixed;
+  left: 50%;
+  top: 0rem;
+  transform: translateX(-50%);
+  display: flex;
+  backdrop-filter: blur(15px);
+  justify-content: center;
+}
+
+/* button elements */
+nav a {
+  font-family: var(--font-primary);
+  font-size: 20px;
+  width: 16.9%;
+  text-align: center;
+  display: inline-block;
+  color: var(--color-white);
+  padding: 0.5rem 5rem;
+  cursor: pointer;
+  border: 2px solid var(--color-white);
+  background: transparent;
+  position: relative;
+  transition: var(--transition-btn);
+}
+  
+/* button filler */
+nav a:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(105deg, var(--color-white) 50%, transparent 50%);
+  z-index: -1;  
+  background-size: 300%;
+  background-position: 100%;
+  transition: var(--transition-btn);
+}
+  
+nav a:hover{
+  color: var(--color-bg);
+}
+  
+/* mouse hover over button elements */
+nav a:hover:after {
+  background-position: 0%;
+  font-size: 1.1em;
+}
+  
+nav a.active {
+  background: var(--color-white);
+  color: var(--color-bg);
+}

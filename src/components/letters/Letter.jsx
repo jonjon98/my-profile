@@ -1,5 +1,5 @@
 import React from 'react'
-import './components.css'
+import './letters.css'
 
 const Letter = (props) => {
   /* handle transitions and allow them to finish even

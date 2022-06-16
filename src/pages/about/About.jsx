@@ -1,6 +1,6 @@
 import React from 'react'
 import './about.css'
-import Nav from '../nav/Nav.jsx'
+import Nav from '../../components/nav/Nav.jsx'
 import profilePic from '../../assets/profilePic.jpg'
 import { useLocation } from 'react-router-dom';
 
@@ -9,10 +9,10 @@ const About = () => {
   
   return (
     <div>
-      <div className='aboutHeading'>
+      <Nav activeNav={location.state.name} />
+      <div className='heading'>
         <h1 className='typewriter'>$ whoami</h1>
       </div>
-      <Nav activeNav={location.state.name} />
       <div className='aboutMe'>
         <div className='aboutMeImageBackground'>
           <img className='aboutMeImage' src={profilePic} alt='About Pic'/>

@@ -1,5 +1,5 @@
 import React from 'react'
-import Nav from '../nav/Nav.jsx'
+import Nav from '../../components/nav/Nav.jsx'
 import { useLocation } from 'react-router-dom';
 
 const Projects = () => {

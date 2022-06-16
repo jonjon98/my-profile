@@ -1,5 +1,5 @@
 import React from 'react'
-import './components.css'
+import './glitch.css'
 
 const Glitch = (props) => {
   return (

@@ -19,7 +19,7 @@
 
   /* colors */
   --color-bg: #282828;
-  --color-red: #EBF2FA;
+  --color-red: #D00000;
   --color-white: #EBF2FA;
   --color-green: #BCD979;
   --color-orange: #CC4100;
@@ -57,7 +57,7 @@ body {
   background-size: cover;
   font-family: var(--font-primary);
   font-size: 1.5rem;
-  color: var(--color-red);
+  color: var(--color-white);
   text-shadow:
       0 0 5px rgba(255, 255, 255, 0.8),
       0 0 1px rgba(255, 255, 255, 0.8);
@@ -106,32 +106,21 @@ section > h2, section > h5 {
 
 /* all h2 elements where parent is section */
 section > h2 {
-  color: var(--color-red);
-  margin-bottom: 3rem;
-}
-
-/* a elements */
-a {
-  color: var(--color-red);
-  transition: var(--transition);
-}
-
-/* mouse hover over a elements */
-a:hover {
   color: var(--color-white);
+  margin-bottom: 3rem;
 }
 
 /* button elements */
 button {
   font-family: var(--font-primary);
   font-size: 20px;
-  width: max-content;
+  width: 27.5%;
+  text-align: center;
   display: inline-block;
-  color: var(--color-red);
+  color: var(--color-white);
   padding: 0.5rem 5rem;
-  border-radius: 0rem;
   cursor: pointer;
-  border: 2px solid var(--color-red);
+  border: 2px solid var(--color-white);
   background: transparent;
   position: relative;
   transition: var(--transition-btn);
@@ -145,7 +134,7 @@ button:after {
   bottom: 0;
   left: 0;
   right: 0;
-  background: linear-gradient(105deg, var(--color-red) 50%, transparent 50%);
+  background: linear-gradient(105deg, var(--color-white) 50%, transparent 50%);
   z-index: -1;  
   background-size: 300%;
   background-position: 100%;
@@ -169,20 +158,27 @@ img {
   object-fit: cover;
 }
 
+/* Pages Headings */
+.heading{
+  width: 9.5%;
+  padding-top: 50px;
+  padding-left: 20px;
+}
+
 /* ================== TERMINAL STYLES ================== */
 /* typewriter */
 .typewriter {
   overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: .15em solid var(--color-red); /* The typwriter cursor */
+  border-right: .15em solid var(--color-white); /* The typwriter cursor */
   white-space: nowrap; /* Keeps the content on a single line */
   letter-spacing: 0em; /* Adjust as needed */
   animation: 
-    typing 1s steps(40, end),
+    typing 0.3s steps(40, end),
     blink-caret 0.75s step-end infinite;
 }
   
 .typewriterCursor {
-  border-right: .15em solid var(--color-red); /* The typwriter cursor */
+  border-right: .15em solid var(--color-white); /* The typwriter cursor */
   animation:
     blink-caret 0.75s step-end infinite;
 }
@@ -196,18 +192,7 @@ img {
 /* The typewriter cursor effect */
 @keyframes blink-caret {
   from, to { border-color: transparent }
-  50% { border-color: var(--color-red); }
-}
-
-.OSPrompt {
-  margin-top: 10px;
-  color: var(--color-white);
-}
-
-.dirPrompt{
-  width: fit-content;
-  margin-top: 10px;
-  color: var(--color-white);
+  50% { border-color: var(--color-white); }
 }
 
 /* ================== MEDIA QUERIES (MEDIUM DEVICES) ================== */

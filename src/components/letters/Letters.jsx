@@ -1,5 +1,5 @@
 import React from 'react'
-import './components.css'
+import './letters.css'
 import Letter from './Letter.jsx'
 
 const Letters = (props) => {
