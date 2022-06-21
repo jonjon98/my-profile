@@ -15,12 +15,13 @@ function useHover() {
 
 const Nav = (props) => {
   const [activeNav] = useState(props.activeNav);
+  const [fromLanding] = useState(props.fromLanding);
 
   /* functions to nagivate to header page */
   const navigate = useNavigate();
 
   async function handleClick(page) {
-    navigate('/' + page, {state:{name: page}});
+    navigate('/' + page, {state:{name: page, fromLanding:'false'}});
   }
 
   /* use on hover function for each Nav Bar Button */
@@ -33,11 +34,13 @@ const Nav = (props) => {
   return (
     <div>
       <nav>
-        <a href=' ' onClick={() => handleClick('About')} className={activeNav === 'About' ? "active" : ''} {...aboutBtnHoverProps}>{aboutBtnIsHovering ? "cd ~/About" : "About Me"}</a>      
-        <a href=' ' onClick={() => handleClick('Experience')} className={activeNav === 'Experience' ? "active" : ''} {...experienceBtnHoverProps}>{experienceBtnIsHovering ? "cd ~/Experience" : "My Experience"}</a>     
-        <a href=' ' onClick={() => handleClick('Projects')} className={activeNav === 'Projects' ? "active" : ''} {...projectsBtnHoverProps}>{projectsBtnIsHovering ? "cd ~/Projects" : "My Projects"}</a>      
-        <a href=' ' onClick={() => handleClick('Skills')} className={activeNav === 'Skills' ? "active" : ''} {...skillsBtnHoverProps}>{skillsBtnIsHovering ? "cd ~/Skills" : "My Skills"}</a>     
-        <a href=' ' onClick={() => handleClick('Contact')} className={activeNav === 'Contact' ? "active" : ''} {...contactBtnHoverProps}>{contactBtnIsHovering ? "cd ~/Contact" : "Contact Me!"}</a>      
+        <nav className={fromLanding=== 'true' ? 'loading' : '' }>
+          <a href=' ' onClick={() => handleClick('About')} className={activeNav === 'About' ? 'active' : ''} {...aboutBtnHoverProps}>{aboutBtnIsHovering ? 'cd ~/About' : 'About Me'}</a>      
+          <a href=' ' onClick={() => handleClick('Experience')} className={activeNav === 'Experience' ? "active" : ''} {...experienceBtnHoverProps}>{experienceBtnIsHovering ? 'cd ~/Experience' : 'My Experience'}</a>     
+          <a href=' ' onClick={() => handleClick('Projects')} className={activeNav === 'Projects' ? "active" : ''} {...projectsBtnHoverProps}>{projectsBtnIsHovering ? 'cd ~/Projects' : 'My Projects'}</a>      
+          <a href=' ' onClick={() => handleClick('Skills')} className={activeNav === 'Skills' ? "active" : ''} {...skillsBtnHoverProps}>{skillsBtnIsHovering ? 'cd ~/Skills' : 'My Skills'}</a>     
+          <a href=' ' onClick={() => handleClick('Contact')} className={activeNav === 'Contact' ? "active" : ''} {...contactBtnHoverProps}>{contactBtnIsHovering ? 'cd ~/Contact' : 'Contact Me!'}</a>      
+        </nav>
       </nav>
   </div>
   )

@@ -8,7 +8,7 @@ const Contact = () => {
   return (
     <div>
       Contact Me
-      <Nav activeNav={location.state.name} />
+      <Nav activeNav={location.state.name} fromLanding={location.state.fromLanding}/>
       <form>
         <div>Name</div>
         <div>Email</div>

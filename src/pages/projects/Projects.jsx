@@ -8,7 +8,7 @@ const Projects = () => {
   return (
     <div>
       Projects
-      <Nav activeNav={location.state.name} />
+      <Nav activeNav={location.state.name} fromLanding={location.state.fromLanding}/>
       <div>
         <div>FYP (WIP)</div>
         <div>MDP</div>

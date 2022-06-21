@@ -39,7 +39,7 @@ const Landing = () => {
     setCmdState(cmdState+1);
     /* sleep for 1.5 seconds */
     /* await new Promise(r => setTimeout(r, 0)); */
-    navigate('/About', {state:{name:'About'}});
+    navigate('/About', {state:{name:'About', fromLanding:'true'}});
   }
 
   /* use on hover function for About Page button */

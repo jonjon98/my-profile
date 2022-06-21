@@ -8,7 +8,7 @@ const Experience = () => {
   return (
     <div>
       Experience
-      <Nav activeNav={location.state.name} />
+      <Nav activeNav={location.state.name} fromLanding={location.state.fromLanding}/>
       <div>
         <div>MicroSec</div>
         <div>Avitron</div>

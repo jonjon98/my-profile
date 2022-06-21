@@ -8,7 +8,7 @@ const Skills = () => {
   return (
     <div>
       Skills
-      <Nav activeNav={location.state.name} />
+      <Nav activeNav={location.state.name} fromLanding={location.state.fromLanding}/>
       <div>
         <div>React</div>
         <div>Linux</div>
