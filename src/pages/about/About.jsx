@@ -1,7 +1,6 @@
 import React from 'react'
 import './about.css'
 import Nav from '../../components/nav/Nav.jsx'
-import profilePic from '../../assets/profilePic.jpg'
 import { useLocation } from 'react-router-dom';
 
 const About = () => {
@@ -15,7 +14,14 @@ const About = () => {
       </div>
       <div className='aboutMe'>
         <div className='aboutMeImageBackground'>
-          <img className='aboutMeImage' src={profilePic} alt='About Pic'/>
+          <div className='slider'>
+            <div className='container'>
+              <div className='slide x'></div>
+              <div className='slide y'></div>
+              <div className='slide z'></div>
+            </div>
+            <div className='shadow'></div>
+          </div>
         </div>
         <div className='aboutMeText'>
           <div className='aboutMeTextCardBackground'>
