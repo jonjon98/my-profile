@@ -4,69 +4,64 @@
 
 @keyframes loading {
   from {
-    background-color: var(--color-white);
+    opacity: 0;
   }
   to {
-    background-color: var(--color-white);
+    opacity: 1;
   }
 }
 
 nav {
-  background: rgba(0, 0, 0, 0.3);
   width: 100%;
-  display: block;
-  z-index: 2;
-  position: fixed;
-  left: 50%;
-  top: 0rem;
-  transform: translateX(-50%);
+  padding-right: 10%;
+  padding-left: 10%;
+  padding-top: 20px;
   display: flex;
-  backdrop-filter: blur(15px);
-  justify-content: center;
+  justify-content: space-between;
+}
+
+.navLinks {
+  justify-content: right;
+}
+
+nav h2{
+  position: relative;
+  display: inline-block;
+  margin: 10px;
 }
 
 /* button elements */
 nav a {
-  font-family: var(--font-primary);
-  font-size: 20px;
-  width: 16.9%;
-  text-align: center;
-  display: inline-block;
-  color: var(--color-white);
-  padding: 0.5rem 5rem;
-  cursor: pointer;
-  border: 2px solid var(--color-white);
-  background: transparent;
   position: relative;
-  transition: var(--transition-btn);
+  display: inline-block;
+  margin: 20px;
 }
   
 /* button filler */
 nav a:after {
   content: "";
   position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: linear-gradient(105deg, var(--color-white) 50%, transparent 50%);
-  z-index: -1;  
-  background-size: 300%;
-  background-position: 100%;
-  transition: var(--transition-btn);
-}
-  
-nav a:hover{
-  color: var(--color-bg);
+  left:0;
+  top: 100%;
+  width: 0;
+  height: 2px;
+  background-color: #FFFFFF;
+  transition: width .3s ease-in-out;
 }
   
 /* mouse hover over button elements */
 nav a:hover:after {
-  background-position: 0%;
-  font-size: 1.1em;
+  width: 100%;
 }
-  
-nav a.active {
-  background: var(--color-white);
-  color: var(--color-bg);
+
+/* active tab has a white line below the words */
+.active:before{
+  content: "";
+  position: absolute;
+  left:0;
+  top: 100%;
+  width: 100%;
+  height: 2px;
+  background-color: #FFFFFF;
+  transition: width .3s ease-in-out;
 }

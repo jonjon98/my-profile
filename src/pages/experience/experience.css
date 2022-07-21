@@ -1,0 +1,13 @@
+.experience {
+  padding-left: 10.5%;
+  padding-top: 2%;
+}
+.experienceHeading{
+  width: 27.5%;
+}
+
+.experienceText {
+  display: grid;
+  grid-template-columns: 60% 50%;
+  gap: 15%;
+}

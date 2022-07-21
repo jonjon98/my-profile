@@ -7,8 +7,8 @@ const Cursor = () => {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
     let spots = [];
-    let luminance = 0;
-    let flag = 0;
+    //let luminance = 0;
+    //let flag = 0;
 
     const mouse = {
       x: undefined,
@@ -30,7 +30,7 @@ const Cursor = () => {
         this.size = Math.random()*2 + 0.1;
         this.speedX = Math.random()*2 - 1;
         this.speedY = Math.random()*2 - 1;
-        this.color = 'hsl(0, 0%, '+luminance+'%)';
+        this.color = 'hsl(0, 0%, 100%)';
       }
       update(){
         this.x += this.speedX;
@@ -75,7 +75,7 @@ const Cursor = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       handleParticle();
       
-      if(luminance>=100){
+      /*if(luminance>=100){
         flag=1;
       }
       if(luminance<=0){
@@ -86,7 +86,7 @@ const Cursor = () => {
       }
       else{
         luminance--
-      }
+      }*/
       requestAnimationFrame(animate);
     }
 

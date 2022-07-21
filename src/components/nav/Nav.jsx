@@ -33,14 +33,15 @@ const Nav = (props) => {
   
   return (
     <div>
-      <nav>
-        <nav className={fromLanding=== 'true' ? 'loading' : '' }>
-          <a href=' ' onClick={() => handleClick('About')} className={activeNav === 'About' ? 'active' : ''} {...aboutBtnHoverProps}>{aboutBtnIsHovering ? 'cd ~/About' : 'About Me'}</a>      
-          <a href=' ' onClick={() => handleClick('Experience')} className={activeNav === 'Experience' ? "active" : ''} {...experienceBtnHoverProps}>{experienceBtnIsHovering ? 'cd ~/Experience' : 'My Experience'}</a>     
-          <a href=' ' onClick={() => handleClick('Projects')} className={activeNav === 'Projects' ? "active" : ''} {...projectsBtnHoverProps}>{projectsBtnIsHovering ? 'cd ~/Projects' : 'My Projects'}</a>      
-          <a href=' ' onClick={() => handleClick('Skills')} className={activeNav === 'Skills' ? "active" : ''} {...skillsBtnHoverProps}>{skillsBtnIsHovering ? 'cd ~/Skills' : 'My Skills'}</a>     
-          <a href=' ' onClick={() => handleClick('Contact')} className={activeNav === 'Contact' ? "active" : ''} {...contactBtnHoverProps}>{contactBtnIsHovering ? 'cd ~/Contact' : 'Contact Me!'}</a>      
-        </nav>
+      <nav className={fromLanding=== 'true' ? 'loading' : '' }>
+        <h2>jonjon</h2>
+        <div className='navLinks'>
+          <a href=' ' onClick={() => handleClick('About')} className={activeNav === 'About' ? 'active' : ''}>About Me.</a>      
+          <a href=' ' onClick={() => handleClick('Experience')} className={activeNav === 'Experience' ? "active" : ''} {...experienceBtnHoverProps}>Experience.</a>     
+          <a href=' ' onClick={() => handleClick('Projects')} className={activeNav === 'Projects' ? "active" : ''}>Projects.</a>      
+          <a href=' ' onClick={() => handleClick('Skills')} className={activeNav === 'Skills' ? "active" : ''}>Skills.</a>     
+          <a href=' ' onClick={() => handleClick('Contact')} className={activeNav === 'Contact' ? "active" : ''}>Contect Me!</a>      
+        </div>
       </nav>
   </div>
   )

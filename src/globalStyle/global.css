@@ -18,7 +18,7 @@
   --font-secondary: 'Fira Code', monospace;
 
   /* colors */
-  --color-bg: #282828;
+  --color-bg: #141524ed;
   --color-red: #D00000;
   --color-white: #EBF2FA;
   --color-green: #BCD979;
@@ -51,8 +51,7 @@ html {
 body {
   box-sizing: border-box;
   height: 100%;
-  background-color: #000000;
-  background-image: radial-gradient(var(--color-bg), #000000);
+  background-color: var(--color-bg);
   background-repeat: no-repeat;
   background-size: cover;
   font-family: var(--font-primary);
@@ -156,13 +155,6 @@ img {
   display: block;
   width: 100%;
   object-fit: cover;
-}
-
-/* Pages Headings */
-.heading{
-  width: 9.5%;
-  padding-top: 50px;
-  padding-left: 20px;
 }
 
 /* ================== TERMINAL STYLES ================== */
