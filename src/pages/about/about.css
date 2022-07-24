@@ -4,7 +4,7 @@
 }
 
 .aboutmeHeading{
-  width: 10.5%;
+  width: 14.3%;
   padding-left: 1%;
 }
 
@@ -12,6 +12,14 @@
   overflow: hidden;
   display: grid;
   grid-template-columns: 60% 50%;
+  gap: 15%;
+  padding: 70px 0;
+  margin: 20px;
+  text-align: left;
+}
+
+.aboutMeLinks {
+  overflow: hidden;
   gap: 15%;
   padding: 70px 0;
   margin: 20px;

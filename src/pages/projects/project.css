@@ -1,12 +1,12 @@
-.experience {
+.project {
   padding-left: 10.5%;
   padding-top: 2%;
 }
-.experienceHeading{
-  width: 28.5%;
+.projectHeading{
+  width: 24.7%;
 }
 
-.experienceText {
+.projectText {
   display: grid;
   grid-template-columns: 60% 50%;
   gap: 15%;

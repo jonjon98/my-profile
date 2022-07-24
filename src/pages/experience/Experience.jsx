@@ -11,7 +11,7 @@ const Experience = () => {
       <Nav activeNav={location.state.name} fromLanding={location.state.fromLanding} />
       <div className='experience'>
         <div className='experienceHeading'>
-          <h1 className='typewriter'>$ cat experience</h1>
+          <h1 className='typewriter'>$cat experience</h1>
         </div>
         <div className='experienceText'>
           <div>

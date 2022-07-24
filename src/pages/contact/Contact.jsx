@@ -6,19 +6,19 @@ const Contact = () => {
   const location = useLocation();
 
   return (
-    <div>
-      Contact Me
+    <>
       <Nav activeNav={location.state.name} fromLanding={location.state.fromLanding}/>
-      <form>
-        <div>Name</div>
-        <div>Email</div>
-        <div>Message</div>
-      </form>
-      <div>
-      <a href=' '>Linkedin</a>
-      <a href=' '>Github</a>
+      <div className='project'>
+        <div className='projectHeading'>
+          <h1 className='typewriter'>Contact Me</h1>
+        </div>
+        <form>
+          <label>Name</label>
+          <label>Email</label>
+          <label>Message</label>
+        </form>
       </div>
-    </div>
+    </>
   )
 }
 
