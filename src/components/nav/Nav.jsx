@@ -17,7 +17,7 @@ const Nav = (props) => {
   return (
     <div>
       <nav className={fromLanding=== 'true' ? 'loading' : '' }>
-        <h2>jonjon</h2>
+      <h2 onClick={() => handleClick('')} className='homepage'>jonjon</h2>
         <div className='navLinks'>
           <a href=' ' onClick={() => handleClick('About')} className={activeNav === 'About' ? 'active' : ''}>About Me.</a>      
           <a href=' ' onClick={() => handleClick('Experience')} className={activeNav === 'Experience' ? "active" : ''}>Experience.</a>     
