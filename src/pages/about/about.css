@@ -1,6 +1,6 @@
 .aboutMe {
   padding-left: 10%;
-  padding-top: 5%;
+  padding-top: 2%;
 }
 
 .aboutmeHeading{
@@ -13,7 +13,6 @@
   display: grid;
   grid-template-columns: 60% 50%;
   gap: 15%;
-  padding: 70px 0;
   margin: 20px;
   text-align: left;
 }

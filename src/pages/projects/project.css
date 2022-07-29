@@ -11,3 +11,7 @@
   grid-template-columns: 60% 50%;
   gap: 15%;
 }
+
+.date {
+  color: var(--color-grey);
+}
