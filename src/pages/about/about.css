@@ -1,6 +1,6 @@
 .aboutMe {
   padding-left: 10%;
-  padding-top: 10%;
+  padding-top: 5%;
 }
 
 .aboutmeHeading{
@@ -15,6 +15,12 @@
   gap: 15%;
   padding: 70px 0;
   margin: 20px;
+  text-align: left;
+}
+
+.aboutMeSkills {
+  overflow: hidden;
+  gap: 15%;
   text-align: left;
 }
 

@@ -22,7 +22,7 @@ const Nav = (props) => {
           <a href=' ' onClick={() => handleClick('About')} className={activeNav === 'About' ? 'active' : ''}>About Me.</a>      
           <a href=' ' onClick={() => handleClick('Experience')} className={activeNav === 'Experience' ? "active" : ''}>Experience.</a>     
           <a href=' ' onClick={() => handleClick('Projects')} className={activeNav === 'Projects' ? "active" : ''}>Projects.</a>      
-          <a href=' ' onClick={() => handleClick('Contact')} className={activeNav === 'Contact' ? "active" : ''}>Contect Me!</a>      
+          <a href=' ' onClick={() => handleClick('Contact')} className={activeNav === 'Contact' ? "active" : ''}>Contact Me!</a>      
         </div>
       </nav>
   </div>
