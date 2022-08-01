@@ -1,0 +1,34 @@
+[
+  {
+    "company": "MicroSec",
+    "role": "Cyber Security Software Developer Intern",
+    "date": "Dec 2021 – May 2022",
+    "desc": ["Developed a C program to cluster logs of the same type.", 
+             "Developed security protocols using signed certificates and certificate revocation lists.",
+             "Implemented a basic web-scraping tool to obtain information on a website in the form of a .csv file.",
+             "Implemented a user activity simulation on an internal testbed network."
+            ],
+    "tech": [""]
+  },
+
+  {
+    "company": "Avitron",
+    "role": "Full Stack Developer Intern",
+    "date": "Jun 2021 – Aug 2021",
+    "desc": ["Developed a full stack system in a team to help manage company documents.", 
+             "Made use of company APIs to pull information from MySQL database"
+            ],
+    "tech": [""]
+  },
+
+  {
+    "company": "ServerSam",
+    "role": "Project Lead/Full Stack Developer",
+    "date": "May 2021 – Aug 2021",
+    "desc": ["Led a team of three to complete deliverables set out by clients.", 
+             "Developed websites for E-commerce sites and businesses using HTML, CSS, ASP.Net, C#, and SQL Server Management databases.",
+             "Implemented relevant APIs to the frontend such as Google Maps and Facebook pages."
+            ],
+    "tech": [""]
+  }
+]

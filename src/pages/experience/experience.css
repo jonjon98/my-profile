@@ -9,7 +9,7 @@
 .experienceText {
   display: grid;
   grid-template-columns: 60%;
-  gap: 1%;
+  gap: 5%;
 }
 
 .date {
