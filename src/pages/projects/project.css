@@ -9,6 +9,7 @@
 .projectText {
   display: grid;
   grid-template-columns: 60%;
+  gap: 5%;
 }
 
 .date {
