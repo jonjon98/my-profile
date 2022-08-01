@@ -13,7 +13,7 @@
   width: 100%;
   font-size: 20px;
   resize: none;
-  padding: 5px;
+  padding: 10px;
 }
 
 .inputEmail {
@@ -22,7 +22,7 @@
   width: 100%;
   font-size: 20px;  
   resize: none;
-  padding: 5px;
+  padding: 10px;
 }
 
 .inputMessage {
@@ -32,7 +32,7 @@
   font-size: 20px;
   height: 200px;
   resize: none;
-  padding: 5px;
+  padding: 10px;
 }
 
 /* animated borders */
