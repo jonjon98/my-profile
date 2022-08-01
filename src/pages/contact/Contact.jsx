@@ -9,27 +9,33 @@ const Contact = () => {
   return (
     <div className='noHighlight'>
       <Nav activeNav={location.state.name} fromLanding={location.state.fromLanding}/>
-      <div className='project'>
-        <div className='projectHeading'>
+      <div className='contact'>
+        <div className='contactHeading'>
           <h1 className='typewriter'>Contact Me</h1>
         </div>
-      <form action="https://formsubmit.co/278dbd0b95eed4720a9d39cc16757902" method="POST">
-        <label>Name</label>
-        <br/>
-        <textarea className='inputName' type="text" name="name" required/>
-        <br/>
-        <label>Email Address</label>
-        <br/>
-        <textarea className='inputEmail' type="email" name="email" required/>
-        <br/>
-        <label>Message</label>
-        <br/>
-        <textarea className='inputMessage' type="text" name="message" required/>
-        <br/>
-        <button type="submit">Send</button>
-        <input type="hidden" name="_next" value="https://jonjon98.netlify.app/Thankyou"/>
-        <input type="hidden" name="_captcha" value="false"/>
-      </form>
+        <form className='formElements' action="https://formsubmit.co/278dbd0b95eed4720a9d39cc16757902" method="POST">
+          <label>Name</label>
+          <br/>
+          <div className="animated-box in">
+            <textarea className='inputName' type="text" name="name" required/>
+            <br/>
+          </div>
+          <label>Email Address</label>
+          <br/>
+          <div className="animated-box in">
+            <textarea className='inputEmail' type="email" name="email" required/>
+            <br/>
+          </div>
+          <label>Message</label>
+          <br/>
+          <div className="animated-box in">
+            <textarea className='inputMessage' type="text" name="message" required/>
+            <br/>
+          </div>
+          <button type="submit">Send</button>
+          <input type="hidden" name="_next" value="https://jonjon98.netlify.app/Thankyou"/>
+          <input type="hidden" name="_captcha" value="false"/>
+        </form>
       </div>
     </div>
   )

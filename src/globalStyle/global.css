@@ -127,7 +127,8 @@ button {
   text-align: center;
   display: inline-block;
   color: var(--color-white);
-  padding: 0.5rem 5rem;
+  padding: 10px;
+  margin-top: 10px;
   cursor: pointer;
   border: 2px solid var(--color-white);
   background: transparent;
@@ -175,7 +176,7 @@ img {
   white-space: nowrap; /* Keeps the content on a single line */
   letter-spacing: 0em; /* Adjust as needed */
   animation: 
-    typing 0.3s steps(40, end),
+    typing 0.7s steps(40, end),
     blink-caret 0.75s step-end infinite;
 }
 

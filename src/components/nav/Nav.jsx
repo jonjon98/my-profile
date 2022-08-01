@@ -16,7 +16,7 @@ const Nav = (props) => {
   
   return (
     <div className='noHighlight'>
-      <nav className={fromLanding=== 'true' ? 'loading' : '' }>
+      <nav className={fromLanding === 'true' ? 'loading' : '' }>
       <h2 onClick={() => handleClick('')} className='homepage'>jonjon</h2>
         <div className='navLinks'>
           <a href=' ' onClick={() => handleClick('About')} className={activeNav === 'About' ? 'active' : ''}>About Me.</a>      
