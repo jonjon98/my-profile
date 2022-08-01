@@ -1,0 +1,32 @@
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: grey;
+  opacity: 1; /* Firefox */
+}
+
+.inputName {
+  background-color: transparent;
+  color: var(--color-white);
+  width: 40%;
+  font-size: 20px;
+  border-style: solid;  
+  border: 1px;
+  border-color: var;
+  resize: none;
+}
+
+.inputEmail {
+  background-color: transparent;
+  color: var(--color-white);
+  width: 40%;
+  font-size: 20px;  
+  resize: none;
+}
+
+.inputMessage {
+  background-color: transparent;
+  color: var(--color-white);
+  width: 40%;
+  font-size: 20px;
+  height: 200px;
+  resize: none;
+}

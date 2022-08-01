@@ -1,4 +1,5 @@
 import React from 'react'
+import './contact.css'
 import Nav from '../../components/nav/Nav.jsx'
 import { useLocation } from 'react-router-dom';
 
@@ -13,11 +14,17 @@ const Contact = () => {
           <h1 className='typewriter'>Contact Me</h1>
         </div>
       <form action="https://formsubmit.co/278dbd0b95eed4720a9d39cc16757902" method="POST">
-        <input type="text" name="name" placeholder="Name" required/>
+        <label>Name</label>
         <br/>
-        <input type="email" name="email" placeholder="Email Address" required/>
+        <textarea className='inputName' type="text" name="name" required/>
         <br/>
-        <input type="text" name="message" placeholder="Message" required/>
+        <label>Email Address</label>
+        <br/>
+        <textarea className='inputEmail' type="email" name="email" required/>
+        <br/>
+        <label>Message</label>
+        <br/>
+        <textarea className='inputMessage' type="text" name="message" required/>
         <br/>
         <button type="submit">Send</button>
         <input type="hidden" name="_next" value="https://jonjon98.netlify.app/Thankyou"/>

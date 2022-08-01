@@ -11,8 +11,8 @@
 .aboutMeText {
   overflow: hidden;
   display: grid;
-  grid-template-columns: 60% 50%;
-  gap: 15%;
+  grid-template-columns: 70%;
+  gap: 5%;
   margin: 20px;
   text-align: left;
 }

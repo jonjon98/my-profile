@@ -8,8 +8,8 @@
 
 .experienceText {
   display: grid;
-  grid-template-columns: 60% 50%;
-  gap: 15%;
+  grid-template-columns: 60%;
+  gap: 1%;
 }
 
 .date {
