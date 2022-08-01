@@ -61,6 +61,10 @@ body {
   text-shadow:
       0 0 5px rgba(255, 255, 255, 0.8),
       0 0 1px rgba(255, 255, 255, 0.8);
+}
+
+/* components where I don't want highlighting */
+.noHighlight {
   /* no text selection */
   -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
@@ -69,6 +73,11 @@ body {
         -ms-user-select: none; /* Internet Explorer/Edge */
             user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome, Opera and Firefox */
+}
+
+/* Changing the highlighting colour */
+::selection {
+  background: red;
 }
 
 /* ================== GENERAL STYLES ================== */

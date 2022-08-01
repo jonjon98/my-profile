@@ -46,7 +46,7 @@ const Landing = () => {
   const [aboutBtnIsHovering, aboutBtnHoverProps] = useHover();
 
   return (
-    <>
+    <div className='noHighlight'>
       <canvas id='canvas' />
       {/*<canvas id='canvas2' />*/}
       
@@ -55,7 +55,7 @@ const Landing = () => {
         <CypherText textList={shortAboutMe} delay={1300}/>
         <button onClick={handleClick} {...aboutBtnHoverProps}>{aboutBtnIsHovering ? "cd ~/About" : "About Me"}</button>
       </div>
-    </>
+    </div>
   )
 }
 

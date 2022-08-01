@@ -10,7 +10,7 @@ const Projects = () => {
     <>
       <Nav activeNav={location.state.name} fromLanding={location.state.fromLanding}/>
       <div className='project'>
-        <div className='projectHeading'>
+        <div className='projectHeading noHighlight'>
           <h1 className='typewriter'>$cat projects</h1>
         </div>
         <div className='projectText'>

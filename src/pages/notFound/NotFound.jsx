@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 const NotFound = () => {
   const navigate = useNavigate();
   return (
-    <div>
+    <div className='noHighlight'>
         <div class="noise"></div>
         <div class="overlay"></div>
         <div class="terminal">

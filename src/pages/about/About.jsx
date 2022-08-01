@@ -12,7 +12,7 @@ const About = () => {
     <>
       <Nav activeNav={location.state.name} fromLanding={location.state.fromLanding}/>
       <div className='aboutMe'>
-        <div className='aboutmeHeading'>
+        <div className='aboutmeHeading noHighlight'>
           <h1 className='typewriter'>$whoami</h1>
         </div>
         <div className='aboutMeText'>
