@@ -17,17 +17,9 @@ const About = () => {
           <h1 className='typewriter'>$whoami</h1>
         </div>
         <div className='aboutMeText'>
-          <h2>
-            Hey there! I'm Jonathan, and I love to learn about the latest developments in technology.
-          </h2>
-          <br />
-          <h3>
-            I get really excited when I am able to apply what I have learnt to be able to create something people enjoy using.
-          </h3>
-          <br />
-          <h3>
-            Currently on my final year in university.
-          </h3>
+          <h2>{Database[0].intro}</h2>
+          <h3>{Database[0].desc[0]}</h3>
+          <h3>{Database[0].desc[1]}</h3>
         </div>
         <div className='aboutMeText'>
           <h2>

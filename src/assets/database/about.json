@@ -2,7 +2,9 @@
   {
     "name": "Jonathan",
     "intro": "Hey there! I'm Jonathan, and I love to learn about the latest developments in technology.",
-    "desc": "I get really excited when I am able to apply what I have learnt to be able to create something people enjoy using.",
+    "desc": ["I get really excited when I am able to apply what I have learnt to be able to create something people enjoy using.",
+             "Currently on my final year in university."
+            ],
     "skills": [""],
     "socials": [""]
   }

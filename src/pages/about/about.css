@@ -9,7 +9,6 @@
 }
 
 .aboutMeText {
-  overflow: hidden;
   display: grid;
   grid-template-columns: 70%;
   gap: 5%;
