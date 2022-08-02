@@ -82,11 +82,9 @@ nav a:hover:after {
 
 .homepage::before {
   content: " ";
-  display: block;
   position: absolute;
   top: 0; right: 0; bottom: 0; left: 0;
-  inset: 0 0 0 0;
-  background: var(--color-bg);
+  background: linear-gradient(70deg, var(--color-black), var(--color-grey));
   z-index: -1;
   transition: transform .3s ease;
 }

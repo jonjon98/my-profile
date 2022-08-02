@@ -1,5 +1,6 @@
 import React from 'react'
 import './about.css'
+import Database from '../../assets/database/about.json'
 import Nav from '../../components/nav/Nav.jsx'
 import { useLocation } from 'react-router-dom';
 import { AiOutlineGithub, AiOutlineLinkedin } from 'react-icons/ai';
