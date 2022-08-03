@@ -16,11 +16,11 @@ const Experience = () => {
         </div>
         <div className='experienceText'>
           {Database.map((exp) => (
-            <div>
+            <div key={exp.company}>
               <h2>{exp.role} @{exp.company}</h2>
               <h3 className='date'>{exp.date}</h3>
               {exp.desc.map((desc) => (
-              <h4>- {desc}</h4>
+              <h4 key={desc}>- {desc}</h4>
               ))}
               <h4>tech used</h4>
             </div>

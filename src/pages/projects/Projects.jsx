@@ -15,12 +15,12 @@ const Projects = () => {
           <h1 className='typewriter'>$cat projects</h1>
         </div>
         <div className='projectText'>
-          {Database.map((exp) => (
-            <div>
-              <h2>{exp.title}</h2>
-              <h3 className='date'>{exp.date}</h3>
-              {exp.desc.map((desc) => (
-              <h4>- {desc}</h4>
+          {Database.map((proj) => (
+            <div key={proj.title}>
+              <h2>{proj.title}</h2>
+              <h3 className='date'>{proj.date}</h3>
+              {proj.desc.map((desc) => (
+              <h4 key={desc}>- {desc}</h4>
               ))}
               <h4>tech used</h4>
             </div>
