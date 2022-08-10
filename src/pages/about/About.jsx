@@ -7,7 +7,6 @@ import { useLocation } from 'react-router-dom';
 const About = () => {
   const location = useLocation();
   
-  
   return (
     <>
       <Nav activeNav={location.state.name} fromLanding={location.state.fromLanding}/>
