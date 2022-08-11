@@ -2,11 +2,14 @@ import React from 'react'
 import './about.css'
 import Database from '../../assets/database/about.json'
 import Nav from '../../components/nav/Nav.jsx'
+import { useState } from 'react'
 import { useLocation } from 'react-router-dom';
 
 const About = () => {
   const location = useLocation();
   
+  const [clickCard, setClickCard] = useState(false);
+
   return (
     <>
       <Nav activeNav={location.state.name} fromLanding={location.state.fromLanding}/>
@@ -14,20 +17,19 @@ const About = () => {
         <div className='aboutmeHeading noHighlight'>
             <h1 className='typewriter'>$whoami</h1>
         </div>
-        <div class="container">
-          <div class="card">
-            <figure class="front">
+        <div className="container">
+          <div className={clickCard === true ? 'card flipped' : 'card' } onClick={() => setClickCard(!clickCard)}>
+            <figure className="front">
               <img src="http://www.jboeijenga.nl/img/front.jpg" alt="front"/>
-              <div class="caption">
+              <div className="caption">
                 <h2>Jonathan <span>Yap</span></h2>
                 <p>Full Stack Developer</p>
-                <a href="#">View more</a>
               </div>			
             </figure>
 
-            <figure class="back">
+            <figure className="back">
                <img src="http://www.jboeijenga.nl/img/back.jpg" alt="back"/>
-                <div class="caption">
+                <div className="caption">
                   <dl>
                     <dt>Socials</dt>
                     <dd>Linkedin GitHub</dd>

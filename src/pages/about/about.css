@@ -60,15 +60,13 @@
 }
 
 .container, figure{
-  width:450px;
+  width: 450px;
   height: 270px;
 }
 
 .container{
-  position:absolute;
   perspective:1000;
-  margin-top:-135px;
-  top:50%;
+  top: 50%;
 }
 
 .card{
