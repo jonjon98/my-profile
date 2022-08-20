@@ -15,15 +15,15 @@
   grid-template-columns: 100%;
   gap: 5%;
   margin: 20px;
+  padding: 10px;
   text-align: left;
-  border-radius: 10px;
   overflow: hidden;
 }
 
 .aboutMeTextCard {
   top: 0%;
   position: relative;
-  animation: slideup 0.6s ease-out;
+  animation: slideup 1s ease-out;
   gap: 5%;
   text-align: left;
   background: var(--color-white);
@@ -59,14 +59,73 @@
   color: var(--color-black)
 }
 
+/* animated borders */
+.aboutMe .animated-box {
+  position: relative;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.aboutMe .animated-box:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 4px;
+  background: linear-gradient(70deg, var(--color-white), var(--color-white), var(--color-white), var(--color-grey));
+  background-size: 300% 300%;
+  clip-path: polygon(0% 100%, 3px 100%, 3px 3px, calc(100% - 3px) 3px, calc(100% - 3px) calc(100% - 3px), 3px calc(100% - 3px), 3px 100%, 100% 100%, 100% 0%, 0% 0%);
+}
+
+.aboutMe .animated-box.in:after {
+  animation: frame-enter 1.5s forwards ease-in-out reverse, gradient-animation 3s ease-in-out infinite;
+}
+
+/* motion */
+@keyframes gradient-animation {
+  0% {
+    background-position: 15% 0%;
+  }
+  50% {
+    background-position: 85% 100%;
+  }
+  100% {
+    background-position: 15% 0%;
+  }
+}
+
+@keyframes frame-enter {
+  0% {
+    clip-path: polygon(0% 100%, 3px 100%, 3px 3px, calc(100% - 3px) 3px, calc(100% - 3px) calc(100% - 3px), 3px calc(100% - 3px), 3px 100%, 100% 100%, 100% 0%, 0% 0%);
+  }
+  25% {
+    clip-path: polygon(0% 100%, 3px 100%, 3px 3px, calc(100% - 3px) 3px, calc(100% - 3px) calc(100% - 3px), calc(100% - 3px) calc(100% - 3px), calc(100% - 3px) 100%, 100% 100%, 100% 0%, 0% 0%);
+  }
+  50% {
+    clip-path: polygon(0% 100%, 3px 100%, 3px 3px, calc(100% - 3px) 3px, calc(100% - 3px) 3px, calc(100% - 3px) 3px, calc(100% - 3px) 3px, calc(100% - 3px) 3px, 100% 0%, 0% 0%);
+  }
+  75% {
+    -webkit-clip-path: polygon(0% 100%, 3px 100%, 3px 3px, 3px 3px, 3px 3px, 3px 3px, 3px 3px, 3px 3px, 3px 0%, 0% 0%);
+  }
+  100% {
+    -webkit-clip-path: polygon(0% 100%, 3px 100%, 3px 100%, 3px 100%, 3px 100%, 3px 100%, 3px 100%, 3px 100%, 3px 100%, 0% 100%);
+  }
+}
+
+/* card styling */
 .container, figure{
   width: 450px;
   height: 270px;
 }
 
 .container{
-  perspective:1000;
-  top: 50%;
+  position: relative;	
+  perspective: 1000;	
+  margin-top: 20px;
+  top: 25%;
 }
 
 .card{
@@ -179,7 +238,7 @@ figure .caption {
   transform: translate3d(0,0,0);
 }
 
-.front p {
+.front .hidden {
   letter-spacing: 1px;
   font-size: 68.5%;
   position: absolute;
@@ -190,6 +249,11 @@ figure .caption {
   opacity: 0;
   transform: translate3d(0,10px,0);
   transition: opacity 0.35s, transform 0.35s;
+}
+
+.front:hover .hidden {
+  opacity: 1;
+  transform: translate3d(0,0,0);
 }
 
 .back .caption:before,
@@ -264,11 +328,6 @@ dl dd:after{
 
 dl dd:after{
   clear: both;
-}
-
-.front:hover p {
-  opacity: 1;
-  transform: translate3d(0,0,0);
 }
 
 figure a{

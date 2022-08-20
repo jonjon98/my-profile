@@ -1,7 +1,7 @@
 import React from 'react'
 import './landing.css'
+import Database from '../../assets/database/about.json'
 import Cursor from './Cursor.js'
-//import LavaFloor from './LavaFloor.js'
 import Glitch from '../../components/glitch/Glitch'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
@@ -22,12 +22,6 @@ const Landing = () => {
   /* function to give cursor a trail */
   Cursor();
   
-  /* function to give LavaFloor */
-  /*LavaFloor();*/
-
-  /* shortAboutMe labels */
-  const shortAboutMe = ["Cloud Computing", "Full Stack Developer", "Cyber Security", "Networking"];
-  
   /* About Page button */
   /* using states to check if "cd ~/About" button is pressed */
   const [cmdState, setCmdState] = useState(0);
@@ -47,12 +41,10 @@ const Landing = () => {
 
   return (
     <div className='noHighlight'>
-      <canvas id='canvas' />
-      {/*<canvas id='canvas2' />*/}
-      
+      <canvas id='canvas' />    
       <div className='foreground'>
         <Glitch letters="[I'm jonjon.]"/>
-        <CypherText textList={shortAboutMe} delay={1300}/>
+        <CypherText textList={Database[0].shortAboutMe} delay={1300}/>
         <button onClick={handleClick} {...aboutBtnHoverProps}>{aboutBtnIsHovering ? "cd ~/About" : "About Me"}</button>
       </div>
     </div>

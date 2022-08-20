@@ -2,13 +2,22 @@ import React from 'react'
 import './about.css'
 import Database from '../../assets/database/about.json'
 import Nav from '../../components/nav/Nav.jsx'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useLocation } from 'react-router-dom';
+import CypherText from 'react-cypher-text-loop'
 
 const About = () => {
   const location = useLocation();
   
   const [clickCard, setClickCard] = useState(false);
+
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+      }, 1000);
+  }, [])
 
   return (
     <>
@@ -17,13 +26,23 @@ const About = () => {
         <div className='aboutmeHeading noHighlight'>
             <h1 className='typewriter'>$whoami</h1>
         </div>
+        <div className='aboutMeText animated-box in'>
+          {Database.map((about) => (
+            <div key={about.intro}>
+              <h2>{about.intro}</h2>
+              {about.desc.map((desc) => (
+              <h3 key={desc}>{desc}</h3>
+              ))}
+            </div>
+          ))}
+        </div>
         <div className="container">
-          <div className={clickCard === true ? 'card flipped' : 'card' } onClick={() => setClickCard(!clickCard)}>
+          <div className={clickCard === true ? 'card flipped' : loading ? 'card aboutMeTextCard' : 'card' } onClick={() => setClickCard(!clickCard)}>
             <figure className="front">
               <img src="http://www.jboeijenga.nl/img/front.jpg" alt="front"/>
               <div className="caption">
                 <h2>Jonathan <span>Yap</span></h2>
-                <p>Full Stack Developer</p>
+                <div className='hidden'><CypherText textList={Database[0].shortAboutMe} delay={700}/></div>
               </div>			
             </figure>
 
@@ -41,16 +60,6 @@ const About = () => {
                 </div>
             </figure>
           </div>
-        </div>
-        <div className='aboutMeText'>
-          {Database.map((about) => (
-            <div key={about.intro}>
-              <h2>{about.intro}</h2>
-              {about.desc.map((desc) => (
-              <h3 key={desc}>{desc}</h3>
-              ))}
-            </div>
-          ))}
         </div>
         <div className='aboutMeLinks'>
           <a href='https://www.linkedin.com/in/jonjon98'>Linkedin</a>
