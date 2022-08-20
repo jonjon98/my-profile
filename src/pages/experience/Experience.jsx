@@ -11,12 +11,12 @@ const Experience = () => {
     <>
       <Nav activeNav={location.state.name} fromLanding={location.state.fromLanding} />
       <div className='experience'>
-        <div className='experienceHeading noHighlight'>
-          <h1 className='typewriter'>$cat experience</h1>
+        <div className='noHighlight'>
+          <h1>Experience</h1>
         </div>
         <div className='experienceText'>
           {Database.map((exp) => (
-            <div key={exp.company}>
+            <div className= 'animated-box in' key={exp.company}>
               <h2>{exp.role} @{exp.company}</h2>
               <h3 className='date'>{exp.date}</h3>
               {exp.desc.map((desc) => (

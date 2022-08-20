@@ -45,7 +45,7 @@ const Landing = () => {
       <div className='foreground'>
         <Glitch letters="[I'm jonjon.]"/>
         <CypherText textList={Database[0].shortAboutMe} delay={1300}/>
-        <button onClick={handleClick} {...aboutBtnHoverProps}>{aboutBtnIsHovering ? "cd ~/About" : "About Me"}</button>
+        <button onClick={handleClick} {...aboutBtnHoverProps}>{aboutBtnIsHovering ? "Go to About" : "About Me"}</button>
       </div>
     </div>
   )

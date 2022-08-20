@@ -10,9 +10,7 @@ const Contact = () => {
     <div className='noHighlight'>
       <Nav activeNav={location.state.name} fromLanding={location.state.fromLanding}/>
       <div className='contact'>
-        <div className='contactHeading'>
-          <h1 className='typewriter'>Contact Me</h1>
-        </div>
+        <h1>Contact Me</h1>
         <form className='formElements' action="https://formsubmit.co/278dbd0b95eed4720a9d39cc16757902" method="POST">
           <label>Name</label>
           <br/>

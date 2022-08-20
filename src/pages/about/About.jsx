@@ -23,12 +23,12 @@ const About = () => {
     <>
       <Nav activeNav={location.state.name} fromLanding={location.state.fromLanding}/>
       <div className='aboutMe'>
-        <div className='aboutmeHeading noHighlight'>
-            <h1 className='typewriter'>$whoami</h1>
+        <div className='noHighlight'>
+            <h1>Who am I?</h1>
         </div>
-        <div className='aboutMeText animated-box in'>
+        <div className='aboutMeText'>
           {Database.map((about) => (
-            <div key={about.intro}>
+            <div className='animated-box in' key={about.intro}>
               <h2>{about.intro}</h2>
               {about.desc.map((desc) => (
               <h3 key={desc}>{desc}</h3>

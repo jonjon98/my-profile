@@ -1,10 +1,10 @@
 .contact {
   padding-left: 10.5%;
-  padding-top: 2%;
+  padding-top: 0%;
 }
 
-.contactHeading{
-  width: 19.2%;
+.formElements {
+  margin-top: 20px;
 }
 
 .inputName {
