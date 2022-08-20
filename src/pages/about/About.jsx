@@ -37,7 +37,7 @@ const About = () => {
           ))}
         </div>
         <div className="container">
-          <div className={clickCard === true ? 'card flipped' : loading ? 'card aboutMeTextCard' : 'card' } onClick={() => setClickCard(!clickCard)}>
+          <div className={clickCard ? 'card flipped' : loading ? 'card aboutMeTextCard' : 'card' } onClick={() => setClickCard(!clickCard)}>
             <figure className="front">
               <img src="http://www.jboeijenga.nl/img/front.jpg" alt="front"/>
               <div className="caption">
@@ -49,6 +49,8 @@ const About = () => {
             <figure className="back">
                <img src="http://www.jboeijenga.nl/img/back.jpg" alt="back"/>
                 <div className="caption">
+                  <p>Socials</p><a onClick={e => e.stopPropagation()} className='links' href="https://github.com/jonjon98">Github</a>
+
                   <dl>
                     <dt>Socials</dt>
                     <dd>Linkedin GitHub</dd>
