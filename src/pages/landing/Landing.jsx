@@ -39,7 +39,7 @@ const Landing = () => {
     <div className='noHighlight'>
       <canvas id='canvas' />    
       <div className='foreground'>
-        <Glitch letters="[jonjon98]"/>
+        <Glitch letters="[Welcome...]"/>
         <CypherText textList={Database[0].shortAboutMe} delay={1300}/>
         <button onClick={handleClick} {...aboutBtnHoverProps}>{aboutBtnIsHovering ? "Go to About" : "About Me"}</button>
       </div>

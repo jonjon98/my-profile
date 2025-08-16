@@ -219,16 +219,8 @@ img {
   }
 }
 
-/* body {
-  padding-top: 80px;
-}
-
 :root {
   --navbar-height: 80px;
-}
-
-body {
-  padding-top: var(--navbar-height);
 }
 
 @media (max-width: 768px) {
@@ -241,4 +233,4 @@ body {
   :root {
     --navbar-height: 60px;
   }
-} */
+}
