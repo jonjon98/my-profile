@@ -1,15 +1,28 @@
-/* change HTML element with the ID "canvas" to have a fixed position. */
-/* Used for cursor's canvas */
-#canvas {
-  position: fixed;
-}
-
 /* "foreground" className */
 /* class to put information in the foreground on top of canvas */
 .foreground {
   position: fixed;
   background: transparent;
-  width: 50%;
-  left: 25%; 
-  top: 35%;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  padding: 20px;
+  box-sizing: border-box;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  pointer-events: none; /* Disable on container */
+}
+
+/* Re-enable pointer events on interactive elements */
+.foreground button {
+  pointer-events: auto; /* Re-enable on button */
+}
+
+.foreground a {
+  pointer-events: auto; /* Re-enable on any links */
 }

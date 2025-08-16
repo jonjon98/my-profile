@@ -218,3 +218,27 @@ img {
       margin-top: 2rem;
   }
 }
+
+/* body {
+  padding-top: 80px;
+}
+
+:root {
+  --navbar-height: 80px;
+}
+
+body {
+  padding-top: var(--navbar-height);
+}
+
+@media (max-width: 768px) {
+  :root {
+    --navbar-height: 70px;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --navbar-height: 60px;
+  }
+} */

@@ -1,29 +1,26 @@
 .aboutMe {
-  padding-left: 10%;
-  padding-right: 10%;
-  padding-top: 0%;
-  
+  padding: 2rem 5%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .aboutMeText {
   display: grid;
-  grid-template-columns: 100%;
-  margin-top: 10px;
-  gap: 0%;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
   text-align: left;
-  overflow: hidden;
 }
 
 .aboutMeTextCard {
   top: 0%;
   position: relative;
   animation: slideup 1s ease-out;
-  gap: 5%;
   text-align: left;
   background: var(--color-white);
   color: var(--color-black);
   border-radius: 10px;
-  padding: 10px;
+  padding: 1rem;
 }
 
 @keyframes slideup {
@@ -41,7 +38,24 @@
   text-align: left;
 }
 
-.aboutMeLinks:hover {
+.aboutMeLinks {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.aboutMeLinks a {
+  color: var(--color-white);
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--color-white);
+  border-radius: 5px;
+  transition: var(--transition);
+}
+
+.aboutMeLinks a:hover {
+  background: var(--color-white);
+  color: var(--color-black);
   font-weight: bold;
 }
 
@@ -53,9 +67,8 @@
 .aboutMe .animated-box {
   position: relative;
   width: 100%;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  padding: 10px;
+  margin: 1rem 0;
+  padding: 1.5rem;
 }
 
 .aboutMe .animated-box:after {
@@ -108,15 +121,16 @@
 
 /* card styling */
 .container, figure{
-  width: 450px;
+  width: 100%;
+  max-width: 450px;
   height: 270px;
 }
 
 .container{
   position: relative;	
   perspective: 1000;	
-  margin-top: 20px;
-  top: 25%;
+  margin: 2rem auto;
+  top: 0;
 }
 
 .card{
@@ -252,7 +266,7 @@ figure .caption {
   font-size: 68.5%;
   position: relative;
   bottom: 0;
-  z-index: 1; /* impt to get the link to be above the border which is actually a transparent card covering all the words */
+  z-index: 1;
   left: 0;
   padding: 5px;
   width: 100%;
@@ -340,9 +354,31 @@ dl dd:after{
   clear: both;
 }
 
-@media (min-width: 450px) {
-  .container{
-    left: 50%;
-    margin-left:-225px;
+/* Responsive design */
+@media (max-width: 768px) {
+  .aboutMe {
+    padding: 1rem 3%;
+  }
+  
+  .container, figure {
+    width: 100%;
+    max-width: 350px;
+    height: 220px;
+  }
+  
+  .aboutMeLinks {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .aboutMe {
+    padding: 1rem 2%;
+  }
+  
+  .container, figure {
+    max-width: 300px;
+    height: 180px;
   }
 }

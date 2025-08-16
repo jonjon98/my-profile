@@ -1,46 +1,73 @@
 .contact {
-  padding-left: 10.5%;
-  padding-top: 0%;
+  padding: 2rem 5%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.contact h1 {
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
 .formElements {
-  margin-top: 20px;
+  margin-top: 2rem;
 }
 
-.inputName {
-  background-color: transparent;
-  color: var(--color-white);
-  width: 100%;
-  font-size: 20px;
-  resize: none;
-  padding: 10px;
+.formElements label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
 }
 
-.inputEmail {
-  background-color: transparent;
-  color: var(--color-white);
-  width: 100%;
-  font-size: 20px;  
-  resize: none;
-  padding: 10px;
-}
-
+.inputName,
+.inputEmail,
 .inputMessage {
   background-color: transparent;
   color: var(--color-white);
   width: 100%;
-  font-size: 20px;
-  height: 200px;
+  font-size: 1rem;
   resize: none;
-  padding: 10px;
+  padding: 1rem;
+  border: 1px solid var(--color-grey);
+  border-radius: 5px;
+  transition: var(--transition);
+  margin-bottom: 1rem;
+}
+
+.inputName:focus,
+.inputEmail:focus,
+.inputMessage:focus {
+  border-color: var(--color-white);
+  outline: none;
+}
+
+.inputMessage {
+  height: 150px;
+}
+
+button[type="submit"] {
+  background: transparent;
+  color: var(--color-white);
+  border: 2px solid var(--color-white);
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: var(--transition);
+  width: 100%;
+  margin-top: 1rem;
+}
+
+button[type="submit"]:hover {
+  background: var(--color-white);
+  color: var(--color-black);
 }
 
 /* animated borders */
 .animated-box {
   position: relative;
-  width: 40%;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  width: 100%;
+  margin: 1rem 0;
 }
 
 .animated-box:after {
@@ -88,5 +115,25 @@
   }
   100% {
     -webkit-clip-path: polygon(0% 100%, 3px 100%, 3px 100%, 3px 100%, 3px 100%, 3px 100%, 3px 100%, 3px 100%, 3px 100%, 0% 100%);
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .contact {
+    padding: 1rem 3%;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact {
+    padding: 1rem 2%;
+  }
+  
+  .inputName,
+  .inputEmail,
+  .inputMessage {
+    font-size: 0.9rem;
+    padding: 0.8rem;
   }
 }

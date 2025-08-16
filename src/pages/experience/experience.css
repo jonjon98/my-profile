@@ -1,26 +1,28 @@
 .experience {
-  padding-left: 10.5%;
-  padding-top: 0%;
+  padding: 2rem 5%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .experienceText {
   display: grid;
-  grid-template-columns: 60%;
-  gap: 0%;
-  margin-top: 10px;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
 }
 
 .date {
   color: var(--color-grey);
+  font-style: italic;
+  margin-bottom: 1rem;
 }
 
 /* animated borders */
 .experienceText .animated-box {
   position: relative;
   width: 100%;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  padding: 10px;
+  margin: 1rem 0;
+  padding: 1.5rem;
 }
 
 .experienceText .animated-box:after {
@@ -68,5 +70,18 @@
   }
   100% {
     -webkit-clip-path: polygon(0% 100%, 3px 100%, 3px 100%, 3px 100%, 3px 100%, 3px 100%, 3px 100%, 3px 100%, 3px 100%, 0% 100%);
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .experience {
+    padding: 1rem 3%;
+  }
+}
+
+@media (max-width: 480px) {
+  .experience {
+    padding: 1rem 2%;
   }
 }

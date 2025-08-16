@@ -4,7 +4,7 @@ import Database from '../../assets/database/about.json'
 import Nav from '../../components/nav/Nav.jsx'
 import { useState, useEffect } from 'react'
 import { useLocation } from 'react-router-dom';
-import CypherText from 'react-cypher-text-loop'
+import CypherText from '../../components/cypherText/CypherText'
 
 const About = () => {
   const location = useLocation();

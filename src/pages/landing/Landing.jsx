@@ -5,7 +5,7 @@ import Cursor from './Cursor.js'
 import Glitch from '../../components/glitch/Glitch'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
-import CypherText from 'react-cypher-text-loop'
+import CypherText from '../../components/cypherText/CypherText'
 
 /* function to check if mouse is hovering over button */
 function useHover() {
@@ -18,10 +18,6 @@ function useHover() {
 }
 
 const Landing = () => {
-  /* Canvas functions */
-  /* function to give cursor a trail */
-  Cursor();
-  
   /* About Page button */
   /* using states to check if "cd ~/About" button is pressed */
   const [cmdState, setCmdState] = useState(0);
@@ -43,10 +39,11 @@ const Landing = () => {
     <div className='noHighlight'>
       <canvas id='canvas' />    
       <div className='foreground'>
-        <Glitch letters="[I'm jonjon.]"/>
+        <Glitch letters="[jonjon98]"/>
         <CypherText textList={Database[0].shortAboutMe} delay={1300}/>
         <button onClick={handleClick} {...aboutBtnHoverProps}>{aboutBtnIsHovering ? "Go to About" : "About Me"}</button>
       </div>
+      <Cursor />
     </div>
   )
 }

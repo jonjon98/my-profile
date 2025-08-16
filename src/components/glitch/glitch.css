@@ -3,8 +3,8 @@
     font-size: 8rem;
     font-weight: bold;
     position: relative;
-    width: 100%;
-    
+    width: auto;
+    text-align: center;
     animation: glitch 1000ms infinite;
   }
   
